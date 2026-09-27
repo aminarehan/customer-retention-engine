@@ -1,0 +1,96 @@
+{
+  "segments": [
+    {
+      "segment": "Lapsed one-time buyers",
+      "customers": 1982,
+      "recency_days": 400.0,
+      "frequency": 1.0,
+      "monetary": 261.0
+    },
+    {
+      "segment": "Loyal high-value",
+      "customers": 1147,
+      "recency_days": 16.0,
+      "frequency": 13.0,
+      "monetary": 4889.0
+    },
+    {
+      "segment": "Active developing",
+      "customers": 1236,
+      "recency_days": 23.0,
+      "frequency": 3.0,
+      "monetary": 706.0
+    },
+    {
+      "segment": "At-risk regulars",
+      "customers": 1487,
+      "recency_days": 176.0,
+      "frequency": 5.0,
+      "monetary": 1430.0
+    }
+  ],
+  "model_comparison": [
+    {
+      "model": "Recency rule (no ML)",
+      "AUC": 0.77,
+      "accuracy": NaN,
+      "precision": NaN,
+      "recall": NaN
+    },
+    {
+      "model": "Logistic regression",
+      "AUC": 0.792,
+      "accuracy": 0.708,
+      "precision": 0.649,
+      "recall": 0.856
+    },
+    {
+      "model": "Gradient boosting",
+      "AUC": 0.78,
+      "accuracy": 0.696,
+      "precision": 0.632,
+      "recall": 0.882
+    }
+  ],
+  "top_churn_drivers": [
+    "frequency",
+    "days_per_order",
+    "tenure_days",
+    "cancelled_orders",
+    "orders_last_90d"
+  ],
+  "value_estimate_rank_corr": 0.669,
+  "total_value_at_risk": 1226104,
+  "strategies": [
+    {
+      "strategy": "Rule of thumb: highest churn risk first",
+      "customers targeted": 200,
+      "calls": 200,
+      "spend \u00a3": 5000,
+      "expected revenue saved \u00a3": 1069,
+      "net benefit \u00a3": -3931
+    },
+    {
+      "strategy": "Optimised (value at risk + budget)",
+      "customers targeted": 1120,
+      "calls": 120,
+      "spend \u00a3": 5000,
+      "expected revenue saved \u00a3": 64994,
+      "net benefit \u00a3": 59994
+    }
+  ],
+  "assumptions": {
+    "budget": 5000,
+    "call_capacity": 300,
+    "offers": {
+      "email_voucher": {
+        "cost": 2.0,
+        "save_rate": 0.05
+      },
+      "call_and_voucher": {
+        "cost": 25.0,
+        "save_rate": 0.25
+      }
+    }
+  }
+}

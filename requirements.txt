@@ -1,0 +1,12 @@
+# App and pipeline
+streamlit==1.64.0
+pandas==3.0.6
+numpy==2.5.3
+pyarrow==25.0.1
+scikit-learn==1.9.1
+scipy==1.18.1
+python-calamine==0.8.2
+openpyxl==3.1.5
+# Notebooks only
+matplotlib==3.11.2
+shap==0.52.0

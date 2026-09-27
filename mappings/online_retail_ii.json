@@ -1,0 +1,43 @@
+{
+  "source_name": "Online Retail II (UCI) - UK online retailer",
+  "channel": "online",
+  "column_mapping": {
+    "Invoice": "order_id",
+    "StockCode": "product_id",
+    "Description": "product_name",
+    "Quantity": "quantity",
+    "InvoiceDate": "order_date",
+    "Price": "unit_price",
+    "Customer ID": "customer_id",
+    "Country": "country"
+  },
+  "rules": {
+    "drop_exact_duplicates": true,
+    "cancelled_order_prefix": "C",
+    "require_customer_id": true,
+    "min_quantity": 1,
+    "min_unit_price": 0.01,
+    "non_product_codes": [
+      "POST",
+      "DOT",
+      "C2",
+      "C3",
+      "BANK CHARGES",
+      "AMAZONFEE",
+      "CRUK",
+      "ADJUST",
+      "ADJUST2",
+      "B",
+      "M",
+      "m",
+      "D",
+      "S",
+      "TEST001",
+      "TEST002"
+    ],
+    "non_product_code_prefixes": [
+      "gift_"
+    ],
+    "net_cancellations_against_spend": true
+  }
+}
