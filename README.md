@@ -6,6 +6,8 @@ Predicts which customers of a UK online retailer are likely to stop buying, esti
 
 ## Web app
 
+**Live app:** https://amina-retention-planner.streamlit.app/
+
 `app.py` is a Streamlit app that runs the same pipeline on **any retailer's customer purchase data**:
 
 1. Upload a CSV, Excel or Parquet file, or try the demo data.
